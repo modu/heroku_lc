@@ -8,4 +8,4 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  uri: <%= mongodb://heroku_app3532235:bm6b45cqvh032uh09udqkf1bes@ds031657.mongolab.com:31657/heroku_app3532235 %>
