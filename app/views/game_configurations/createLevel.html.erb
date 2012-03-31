@@ -1,0 +1,44 @@
+<h1> Level Creator </h1>
+<%= @str0.html_safe %>
+<%= (singleElements @ans1).html_safe %>
+<%= (multipleElements @ans2).html_safe %>
+<input type="submit" value="Submit" id="SubmitButton" />
+</form>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+function gen_add(class_name, div_name, button_id, del_button_id) {
+	return function() {
+	var num = $('.'+class_name).length;
+  var newNum  = new Number(num + 1);      // the numeric ID of the new input field being added
+	var newElem = $('#'+div_name + num).clone().attr('id', div_name + newNum);
+  for(var i in button_id) {
+	     x = button_id[i].replace(/\\/g,'')
+       newElem.children('#'+button_id[i]+num).attr('id', x+newNum).attr('name', x+newNum).attr('value', '');
+  }
+      $('#'+div_name+num).after(newElem);
+			if(del_button_id!="nil"){
+      if(newNum == 1) {
+       $('#'+del_button_id).attr('disabled', true);
+      } else {
+       $('#'+del_button_id).attr('disabled', false);	
+      } }
+      } // end return function
+}
+
+
+$("#SubmitButton").click(function(e){
+	if($("input:regex(id,levelname)").val().length == 0){
+		e.preventDefault();
+		alert("Please Also give LevelName!");
+	}
+});
+
+<%= @str3 %>
+
+});
+
+
+</script>

@@ -1,0 +1,11 @@
+development:
+  host: localhost
+  database: level_creator_development
+
+test:
+  host: localhost
+  database: level_creator_test
+
+# set these environment variables on your prod server
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>

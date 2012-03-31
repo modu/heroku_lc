@@ -1,0 +1,34 @@
+
+	<ul>
+	<% @games.each_index do |t| %>
+		<label style="font-family:arial;color:blue;font-size:20px;width: 200px;padding-top:0px;"><%= @games[t] %></label>
+		
+		<a style="font-family:arial;color:red;font-size:17px;" href="/delete/<%=@games[t]%>">  Delete </a>
+		</br>		</br>
+		<li style="font-family:arial;color:blue;font-size:15px;">Level </li>
+	<ul>
+		<li><a href="/showLevel/<%= @games[t] %>"> Show levels </a></li>	
+		<li><a href="/createLevel/<%= @games[t] %>"> Create levels </a></li>	
+	</ul>
+	
+	<li style="font-family:arial;color:blue;font-size:15px;">Sequence </li>
+	
+		<ul>
+		 <li><a href="/<%= @games[t] %>/sequences/show"> Show Sequences </a></li>	
+			<li><a href="/<%= @games[t] %>/sequences/create"> Create Sequences</a></li>	
+		</ul>
+	<li style="font-family:arial;color:blue;font-size:15px;">Experiment </li>
+	
+			<ul>
+			 <li><a href="/<%= @games[t] %>/experiments/show"> Show Experiments </a></li>	
+				<li><a href="/<%= @games[t] %>/experiments/create"> Create Experiments </a></li>	
+			</ul>	
+	</br></br>
+	<%end%>
+	</ul>
+  <style type="text/css">
+  li,a {
+    color: black;
+     }
+  </style>
+	  

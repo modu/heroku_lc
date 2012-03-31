@@ -1,0 +1,677 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-03-17 14:54:42 +0530
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 14:54:43 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 14:54:51 +0530
+Processing by GameConfigurationsController#showGames as HTML
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+Completed 500 Internal Server Error in 102ms
+
+TypeError (db_name must be a string or symbol):
+  app/controllers/game_configurations_controller.rb:27:in `to_a'
+  app/controllers/game_configurations_controller.rb:27:in `showGames'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 14:54:51 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 14:55:44 +0530
+Processing by GameConfigurationsController#showGames as HTML
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+Completed 500 Internal Server Error in 3ms
+
+TypeError (db_name must be a string or symbol):
+  app/controllers/game_configurations_controller.rb:27:in `to_a'
+  app/controllers/game_configurations_controller.rb:27:in `showGames'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 14:55:45 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 14:55:46 +0530
+Processing by GameConfigurationsController#showGames as HTML
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+Completed 500 Internal Server Error in 3ms
+
+TypeError (db_name must be a string or symbol):
+  app/controllers/game_configurations_controller.rb:27:in `to_a'
+  app/controllers/game_configurations_controller.rb:27:in `showGames'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 14:55:46 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:00:15 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (92.9ms)
+Completed 500 Internal Server Error in 6257ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>LevelCreator</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3945847527093720792_2157953560'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 15:00:22 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:00:41 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>LevelCreator</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3945847527093720792_2157953560'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 15:00:41 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:03:27 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>LevelCreator</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3945847527093720792_2157953560'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-03-17 15:03:27 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.1) lib/rack/cache/context.rb:132:in `forward'
+  rack-cache (1.1) lib/rack/cache/context.rb:241:in `fetch'
+  rack-cache (1.1) lib/rack/cache/context.rb:181:in `lookup'
+  rack-cache (1.1) lib/rack/cache/context.rb:65:in `call!'
+  rack-cache (1.1) lib/rack/cache/context.rb:50:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/varun/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:03:45 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 110ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>LevelCreator</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___158060915602488371_2175135340'
+
+
+  Rendered /Users/varun/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /Users/varun/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/varun/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:04:57 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (13.9ms)
+Compiled bootstrap.css  (0ms)  (pid 25921)
+Compiled experiments.css  (1156ms)  (pid 25921)
+Compiled game_configurations.css  (1ms)  (pid 25921)
+Compiled levels.css  (1ms)  (pid 25921)
+Compiled scaffolds.css  (9ms)  (pid 25921)
+Compiled sequences.css  (1ms)  (pid 25921)
+Compiled application.css  (1489ms)  (pid 25921)
+Compiled jquery.js  (2ms)  (pid 25921)
+Compiled jquery_ujs.js  (1ms)  (pid 25921)
+Compiled experiments.js  (1517ms)  (pid 25921)
+Compiled game_configurations.js  (0ms)  (pid 25921)
+Compiled levels.js  (159ms)  (pid 25921)
+Compiled sequences.js  (152ms)  (pid 25921)
+Compiled application.js  (2210ms)  (pid 25921)
+Completed 200 OK in 4109ms (Views: 4106.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /bootstrap.css - 200 OK (3ms)
+
+
+Started GET "/assets/sequences.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /sequences.css - 200 OK (4ms)
+
+
+Started GET "/assets/experiments.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /experiments.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /jquery.js - 200 OK (9ms)
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /game_configurations.css - 200 OK (2ms)
+
+
+Started GET "/assets/levels.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /levels.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /scaffolds.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/experiments.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /experiments.js - 200 OK (2ms)
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /game_configurations.js - 200 OK (7ms)
+
+
+Started GET "/assets/levels.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /levels.js - 200 OK (2ms)
+
+
+Started GET "/assets/sequences.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /sequences.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 15:05:01 +0530
+Served asset /application.js - 200 OK (57ms)
+
+
+Started GET "/createGame" for 127.0.0.1 at 2012-03-17 15:05:23 +0530
+Processing by GameConfigurationsController#createGame as HTML
+  Rendered game_configurations/createGame.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.9ms)
+
+
+Started POST "/created" for 127.0.0.1 at 2012-03-17 15:14:10 +0530
+Processing by GameConfigurationsController#created as HTML
+  Parameters: {"gameName"=>"bsnlcrd", "elementName1"=>"bsnlcrd.levelname", "elementInputType1"=>"textBox", "elementRepeatability1"=>"single", "elementOptions1"=>"", "elementName2"=>"bsnlcrd.title", "elementInputType2"=>"textBox", "elementRepeatability2"=>"single", "elementOptions2"=>"", "elementName3"=>"bsnlcrd.questions.value", "elementInputType3"=>"textBox", "elementRepeatability3"=>"multiple", "elementOptions3"=>"", "elementName4"=>"bsnlcrd.ques.color.value", "elementInputType4"=>"dropDown", "elementRepeatability4"=>"multiple", "elementOptions4"=>"2,3,4,5", "elementName5"=>"bsnlcrd.q.kcs.kcname.l", "elementInputType5"=>"textBox", "elementRepeatability5"=>"multiple", "elementOptions5"=>""}
+WARNING: Can't verify CSRF token authenticity
+  Rendered game_configurations/created.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 89ms (Views: 84.3ms)
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:14:15 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 8.4ms)
+
+
+Started GET "/createLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:14:21 +0530
+Processing by GameConfigurationsController#createLevel as HTML
+  Parameters: {"gameName"=>"bsnlcrd"}
+  Rendered game_configurations/createLevel.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 212ms (Views: 27.8ms)
+
+
+Started POST "/createdLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:15:05 +0530
+Processing by LevelsController#created as HTML
+  Parameters: {"bsnlcrd.levelname"=>"firstone", "bsnlcrd.title"=>"titleistitle", "bsnlcrd.questions.value1"=>"2", "bsnlcrd.questions.value2"=>"3", "bsnlcrd.questions.value3"=>"4", "bsnlcrd.ques.color.value1"=>"2", "bsnlcrd.ques.color.value2"=>"3", "bsnlcrd.ques.color.value3"=>"4", "bsnlcrd.q.kcs.kcname.l1"=>".6", "bsnlcrd.q.kcs.kcname.l2"=>".7", "bsnlcrd.q.kcs.kcname.l3"=>".8", "gameName"=>"bsnlcrd"}
+WARNING: Can't verify CSRF token authenticity
+  Rendered levels/created.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 189ms (Views: 73.1ms)
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:15:09 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 38.2ms)
+
+
+Started GET "/showLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:15:11 +0530
+Processing by LevelsController#show as HTML
+  Parameters: {"gameName"=>"bsnlcrd"}
+  Rendered levels/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.5ms)
+
+
+Started GET "/showLevel/bsnlcrd/firstone/xml" for 127.0.0.1 at 2012-03-17 15:15:13 +0530
+Processing by LevelsController#xml as HTML
+  Parameters: {"gameName"=>"bsnlcrd", "levelName"=>"firstone"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/levels_controller.rb:8:in `xml'
+
+
+  Rendered /Users/varun/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/varun/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/varun/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (196.6ms)
+
+
+Started GET "/showLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:15:37 +0530
+Processing by LevelsController#show as HTML
+  Parameters: {"gameName"=>"bsnlcrd"}
+  Rendered levels/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 8.7ms)
+
+
+Started GET "/showLevel/bsnlcrd/firstone/xml" for 127.0.0.1 at 2012-03-17 15:15:38 +0530
+Processing by LevelsController#xml as HTML
+  Parameters: {"gameName"=>"bsnlcrd", "levelName"=>"firstone"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 4976ms (Views: 43.2ms)
+
+
+Started GET "/createLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:16:32 +0530
+Processing by GameConfigurationsController#createLevel as HTML
+  Parameters: {"gameName"=>"bsnlcrd"}
+  Rendered game_configurations/createLevel.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 9.3ms)
+
+
+Started GET "/createGame" for 127.0.0.1 at 2012-03-17 15:16:37 +0530
+Processing by GameConfigurationsController#createGame as HTML
+  Rendered game_configurations/createGame.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms)
+
+
+Started GET "/createLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:16:55 +0530
+Processing by GameConfigurationsController#createLevel as HTML
+  Parameters: {"gameName"=>"bsnlcrd"}
+  Rendered game_configurations/createLevel.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 9.2ms)
+
+
+Started POST "/createdLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:17:32 +0530
+Processing by LevelsController#created as HTML
+  Parameters: {"bsnlcrd.levelname"=>"second", "bsnlcrd.title"=>"sdfd", "bsnlcrd.questions.value1"=>"234", "bsnlcrd.ques.color.value1"=>"2", "bsnlcrd.ques.color.value2"=>"3", "bsnlcrd.q.kcs.kcname.l1"=>"3,4,5,6", "gameName"=>"bsnlcrd"}
+WARNING: Can't verify CSRF token authenticity
+  Rendered levels/created.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 53.5ms)
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:17:37 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 9.2ms)
+
+
+Started GET "/showLevel/bsnlcrd" for 127.0.0.1 at 2012-03-17 15:17:40 +0530
+Processing by LevelsController#show as HTML
+  Parameters: {"gameName"=>"bsnlcrd"}
+  Rendered levels/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 7.7ms)
+
+
+Started GET "/showLevel/bsnlcrd/second/xml" for 127.0.0.1 at 2012-03-17 15:17:41 +0530
+Processing by LevelsController#xml as HTML
+  Parameters: {"gameName"=>"bsnlcrd", "levelName"=>"second"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 0.3ms)
+
+
+Started GET "/createGame" for 127.0.0.1 at 2012-03-17 15:18:06 +0530
+Processing by GameConfigurationsController#createGame as HTML
+  Rendered game_configurations/createGame.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.6ms)
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiments.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /experiments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /game_configurations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/levels.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /levels.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sequences.css?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /sequences.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /game_configurations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/experiments.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /experiments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/levels.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /levels.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sequences.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /sequences.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 15:20:19 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+MONGODB [WARNING] Please note that logging negatively impacts client-side performance. You should set your logging level no lower than :info in production.
+
+
+Started GET "/showGames" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Processing by GameConfigurationsController#showGames as HTML
+  Rendered game_configurations/showGames.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 210ms (Views: 207.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/experiments.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /experiments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/game_configurations.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /game_configurations.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/levels.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /levels.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sequences.css?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /sequences.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/experiments.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /experiments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/game_configurations.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /game_configurations.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/levels.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /levels.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/sequences.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /sequences.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-17 15:23:32 +0530
+Served asset /application.js - 304 Not Modified (30ms)

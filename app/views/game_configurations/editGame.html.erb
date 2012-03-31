@@ -1,0 +1,13 @@
+
+<body>
+
+	<form method="post"  action="editGame" >
+		<label >Game Name </label>
+	  <input type="text" name="gameName" id="gameName" value=<%=@gameName%>  /> <br />
+				<%= nonRepeatElement @repeat%>
+				<%= repeatElement @nonrepeat %>
+	
+		<input type="button" id="buttonadd" value="Add Element" /> 
+		<input type="submit" id="submit"  value="Update" />
+	</form>
+</body>
