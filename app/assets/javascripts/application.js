@@ -37,17 +37,18 @@ $(function() {
 	$('#DelExperimentButton').click(del_but('clone','cloneID','AddExperimentButton','DelExperimentButton'))
 	
 	
-	
-	
+	//generic add new element function, Don't change
+	//Div to be cloned must have no div inside
+	//button_id is array of child element to be cloned inside parent div
 	function gen_add(class_name, div_name, button_id, del_button_id) {
 		return function() {
  		var num = $('.'+class_name).length;
 	    var newNum  = new Number(num + 1);      // the numeric ID of the new input field being added
 		var newElem = $('#'+div_name + num).clone().attr('id', div_name + newNum);
-        for(var i in button_id) {
+        for(var i in button_id) {				
 	       newElem.children('#'+button_id[i]+num).attr('id', button_id[i]+newNum).attr('name', button_id[i]+newNum).attr('value', '');
         }
-        $('#'+div_name+num).after(newElem);
+        $('#'+div_name+num).after(newElem);		//acutally adding element 
         if(newNum == 1) {
 	       $('#'+del_button_id).attr('disabled', true);
         } else {
@@ -55,6 +56,7 @@ $(function() {
         }
         } // end return function
 	}
+	//generic delete function , don't change
 	function del_but(class_name, div_name, add_button_id, del_button_id) {
 		return function() {
 			var num = $('.'+class_name).length;
@@ -66,7 +68,7 @@ $(function() {
 		} //end of return function
 	}	
 	
-	//function to show hide element by ID,class 
+	//function to show/hide element by there IDs,class 
 	function show_hide(show_list_id ,show_list_class, hide_list_id, hide_list_class){
 		return function() {			
 			if(show_list_id.length > 1){
@@ -97,7 +99,9 @@ $(function() {
 	}		//end of show_hide
 	
 	
-	
+	//generic function for using regular expression in jquery
+	//used to match generic expression like elementType* for all elementType1,elementType2.
+	//source--internet,blog.
 	jQuery.expr[':'].regex = function(elem, index, match) {
 	    var matchParams = match[3].split(','),
 	        validLabels = /^(data|css):/,

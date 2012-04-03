@@ -6,12 +6,13 @@ class ExperimentsController < ApplicationController
   end
 
   def created
-    ob = store_experiment params
-    
-    Experiment.create ob    
-    redirect_to "/showGames"
+    #for changing to correct format
+    ob = store_experiment params                    #store_experiment function in application_controller
+    Experiment.create ob                            #create and save
+    redirect_to "/showGames"                        
   end
 
+#For displaying xml
   def xml    
     obj = {}
     expOb = Experiment.where('experimentName' => params[:experimentName]).to_a[0]
@@ -19,19 +20,19 @@ class ExperimentsController < ApplicationController
     obj['sequences'] = expOb['sequences']
     obj['experimentName'] = expOb['experimentName']
     out = create_xml(obj, '')
-    r = "<hash>"+out+"</hash>\n"
-     
+    r = "<hash>"+out+"</hash>\n"                  #Without main tag i.e. <hash>, error in displaying out xml
     render :xml => r
   end
+  
   #rabel
   def show
     @gameName = params[:gameName]
     @experimentName = Experiment.where(gameName:@gameName).to_a.map{|x| x["experimentName"]}
   end
   
-  def ShowSequenceRandomXml
-    
-    @i = []
+#Show Sequence's xml Randomly   
+#sort_by function on array , with argument for random suffle
+  def ShowSequenceRandomXml  
     @gameName = params[:gameName]
     @experimentName = params[:experimentName]
     @sequenceNames = Experiment.where(gameName:@gameName,experimentName:@experimentName).to_a.first.sequences["sequence"].sort_by{rand} 
@@ -39,12 +40,10 @@ class ExperimentsController < ApplicationController
     if seqOb!=nil
       render :xml => seqOb
     end
-    
      
   end
   
   def delete
-    @i = []
     @gameName = params["gameName"]
     @ExperimentName = params["delExperimentName"]
     if( Experiment.where(gameName:@gameName,experimentName: @ExperimentName).to_a.empty? )
