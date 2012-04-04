@@ -12,19 +12,17 @@ class ExperimentsController < ApplicationController
     redirect_to "/showGames"                        
   end
 
-#For displaying xml
+#displaying all levels in a sequence , Xml format
+#main tag neccessary otherwise error during rendring xml
   def xml    
     obj = {}
     expOb = Experiment.where('experimentName' => params[:experimentName]).to_a[0]
     obj['gameName'] = expOb['gameName']
     obj['sequences'] = expOb['sequences']
     obj['experimentName'] = expOb['experimentName']
-    out = create_xml(obj, '')
-    r = "<hash>"+out+"</hash>\n"                  #Without main tag i.e. <hash>, error in displaying out xml
-    render :xml => r
+    render :xml => "<hash>"+create_xml(obj, '')+"</hash>\n"
   end
   
-  #rabel
   def show
     @gameName = params[:gameName]
     @experimentName = Experiment.where(gameName:@gameName).to_a.map{|x| x["experimentName"]}
@@ -43,16 +41,21 @@ class ExperimentsController < ApplicationController
      
   end
   
+#Delete experiment   
   def delete
     @gameName = params["gameName"]
     @ExperimentName = params["delExperimentName"]
+    binding.pry
     if( Experiment.where(gameName:@gameName,experimentName: @ExperimentName).to_a.empty? )
-      Experiment.where(gameName:@gameName,experimentName: @ExperimentName).to_a.delete_all
+    else
+      Experiment.where(gameName:@gameName,experimentName: @ExperimentName).delete_all
       render 'delete'
       return
     end
     render 'message'
   end
+  
+#retrives all the sequences for particular experimentName   
   def update
     @i = []
     @gameName = params["gameName"]
@@ -65,6 +68,7 @@ class ExperimentsController < ApplicationController
     
   end
   
+#update the Experiment for particular gameName  
   def updated
     @gameName = params[:gameName]
     @experimentName = params[:oldExperimentName]
