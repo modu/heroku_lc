@@ -4,6 +4,7 @@ class GameConfigurationsController < ApplicationController
   
   
   def created
+    binding.pry
     o1 = store_parse(params)
     converter(o1)    
     storing = GameConfiguration.new :gameName => o1[:gameName], :nonRepeat => @ans1, :repeat => @ans2
@@ -14,7 +15,7 @@ class GameConfigurationsController < ApplicationController
     
   end
   
-  def editGame
+  def showEditGame
     @gameName = params["editGame"]
     @repeat = []
     @nonrepeat = []
@@ -23,14 +24,24 @@ class GameConfigurationsController < ApplicationController
     end
     GameConfiguration.where(gameName:@gameName).to_a[0].repeat.each do |t|
       @nonrepeat << t
-    end
+    end    
+  end
+  
+  def editGame
+    
+    #delete_all params[:oldGameName]             #deleting all levels, sequence, experiment refrenced from oldGameName
+    binding.pry
+    o1 = store_parse(params)
+    converter(o1)    
+    storing = GameConfiguration.new :gameName => o1[:gameName], :nonRepeat => @ans1, :repeat => @ans2
+    storing.save
+    redirect_to '/showGames'
     
   end
-
+  
   def createLevel
     query = GameConfiguration.all(:conditions => {:gameName => params["gameName"]})
     v = query.first
-     
     @ans1 = v[:nonRepeat]
     @ans2 = v[:repeat]
     @str0 = '<form method=post action=/createdLevel/'+params['gameName']+'>'
@@ -68,6 +79,14 @@ class GameConfigurationsController < ApplicationController
     Sequence.where(gameName:@gameName).delete_all
     Experiment.where(gameName:@gameName).delete_all
     redirect_to "/all"
+  end
+  
+  def delete_all oldGameName
+    GameConfiguration.where(gameName:oldGameName).delete_all
+    Level.where(oldGameName=>{"$exists"=>true}).delete_all
+    Sequence.where(gameName:oldGameName).delete_all
+    Experiment.where(gameName:oldGameName).delete_all
+    redirect_to "/showGames"    
   end
   
 end

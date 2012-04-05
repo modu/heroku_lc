@@ -53,17 +53,17 @@ module GameConfigurationsHelper
     html = ''
     option = ''
     optionForRepeat = ''
-    optionForRepeat << "#{content_tag :option, "One Element",:selected => "selected"}"
-    optionForRepeat << "#{content_tag :option, "Multiple Elements"}"
-    optionForRepeat << "#{content_tag :option, "comma Seperated Multiple"}"
+    optionForRepeat << "#{content_tag :option, "single",:selected => "selected"}"
+    optionForRepeat << "#{content_tag :option, "multiple"}"
+    optionForRepeat << "#{content_tag :option, "commaSeperatedMultiple"}"
     array.each_index do |t|
       div  = array[t]
       commaSeperatedValues = ''
       html << "<div id=\"#{'cloneId'+(t+1).to_s}\"  class=\"clone\" > <hr>"
       case div["type"]
       when :textBox
-        option << "#{content_tag :option, "TextBox",:selected => "selected"}"
-        option << "#{content_tag :option, "DropDown"}"
+        option << "#{content_tag :option, "textBox",:selected => "selected"}"
+        option << "#{content_tag :option, "dropDown"}"
 
         html << "#{content_tag :label, "Element Name" }"
         html << "#{text_field_tag 'elementName'+(t+1).to_s, div["name"] }"
@@ -75,10 +75,11 @@ module GameConfigurationsHelper
         html << "#{content_tag :label, "Element Options" }"
         html << "#{text_field_tag 'elementOptions'+(t+1).to_s, commaSeperatedValues }"
         html << "</br>"
+        option = ''
 
       when:dropDown
-        option << "#{content_tag :option, "TextBox"}"
-        option << "#{content_tag :option, "DropDown",:selected => "selected"}"
+        option << "#{content_tag :option, "textBox"}"
+        option << "#{content_tag :option, "dropDown",:selected => "selected"}"
         commaSeperatedValues = div["options"].join(",")
         
         html << "#{content_tag :label, "Element Name" }"
@@ -108,43 +109,48 @@ module GameConfigurationsHelper
    optionForRepeat << "#{content_tag :option, "Multiple Elements",:selected => "selected"}"
    optionForRepeat << "#{content_tag :option, "comma Seperated Multiple"}"
    array.each_index do |t|
-     html << "<div id=\"#{'cloneId'+(temp+t+1).to_s}\"  class=\"clone\" > <hr>"
      array[t].each_index do |f|
        commaSeperatedValues = ''
        case array[t][f]["type"]
        when :textBox
+         html << "<div id=\"#{'cloneId'+(temp+t+f+1).to_s}\"  class=\"clone\" > <hr>"
+         
          option << "#{content_tag :option, "TextBox",:selected => "selected"}"
          option << "#{content_tag :option, "DropDown"}"
 
          html << "#{content_tag :label, "Element Name" }"
-         html << "#{text_field_tag 'elementName'+(temp+t+1).to_s, array[t][f]["name"] }"
+         html << "#{text_field_tag 'elementName'+(temp+t+f+1).to_s, array[t][f]["name"] }"
          html << "</br>"
          html << "#{content_tag :label, "Element Input Type" }"
-         html << "#{select_tag "elementInputType"+(temp+t+1).to_s,option.html_safe } <br><br />"
+         html << "#{select_tag "elementInputType"+(temp+t+f+1).to_s,option.html_safe } <br><br />"
          html << "#{content_tag :label, "Element Repeatability" }"
-         html << "#{select_tag "elementRepeatability"+(temp+t+1).to_s,optionForRepeat.html_safe } <br><br />"
+         html << "#{select_tag "elementRepeatability"+(temp+t+f+1).to_s,optionForRepeat.html_safe } <br><br />"
          html << "#{content_tag :label, "Element Options" }"
-         html << "#{text_field_tag 'elementOptions'+(temp+t+1).to_s, commaSeperatedValues }"
+         html << "#{text_field_tag 'elementOptions'+(temp+t+f+1).to_s, commaSeperatedValues }"
          html << "</br>"
+         html << "</br></br></div>"
+         option = ''
        when :dropDown
          option << "#{content_tag :option, "TextBox"}"
          option << "#{content_tag :option, "DropDown",:selected => "selected"}"
          commaSeperatedValues = array[t][f]["options"].join(",")
-
+         html << "<div id=\"#{'cloneId'+(temp+t+f+1).to_s}\"  class=\"clone\" > <hr>"
+         
          html << "#{content_tag :label, "Element Name" }"
-         html << "#{text_field_tag ('elementName'+(temp+t+1).to_s), array[t][f]["name"]}"
+         html << "#{text_field_tag ('elementName'+(temp+t+f+1).to_s), array[t][f]["name"]}"
          html << "</br>"
          html << "#{content_tag :label, "Element Input Type" }"
-         html << "#{select_tag ("elementInputType"+(temp+t+1).to_s),option.html_safe } <br><br />"
+         html << "#{select_tag ("elementInputType"+(temp+t+f+1).to_s),option.html_safe } <br><br />"
          html << "#{content_tag :label, "Element Repeatability" }"
-         html << "#{select_tag "elementRepeatability"+(temp+t+1).to_s,optionForRepeat.html_safe } <br><br />"
+         html << "#{select_tag "elementRepeatability"+(temp+t+f+1).to_s,optionForRepeat.html_safe } <br><br />"
          html << "#{content_tag :label, "Element Options" }"
-         html << "#{text_field_tag 'elementOptions'+(temp+t+1).to_s, commaSeperatedValues }"
+         html << "#{text_field_tag 'elementOptions'+(temp+t+f+1).to_s, commaSeperatedValues }"
          html << "</br>"
+         html << "</br></br></div>"
+         
          end
                  
      end
-     html << "</br></br></div>"
    end
    return html.html_safe
  end #end of nonRepeat function

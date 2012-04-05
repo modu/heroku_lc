@@ -1,18 +1,19 @@
 LevelCreator::Application.routes.draw do
   match 'showGames',                          :to => 'gameConfigurations#showGames',    :via => :get
-  match '/showLevel/:gameName',               :to => 'levels#show',                    :via => :get
   match '/activeGames',                       :to => 'gameConfigurations#activeGames', :via => :get
   match '/all',                               :to => 'gameConfigurations#all',          :via => :get
   match '/addToActiveGames',                  :to => 'gameConfigurations#addToActiveGames', :via => :post
   match 'createGame',                         :to => 'gameConfigurations#createGame',   :via => :get
   match 'created',                            :to => 'gameConfigurations#created',      :via => :post
   match 'createLevel/:gameName',              :to => 'gameConfigurations#createLevel',  :via => :get
-  match 'createdLevel/:gameName',             :to => 'Levels#created',                  :via => :post
-  match 'showLevel/:gameName/:levelName/xml', :to => 'Levels#xml',                      :via => :get
   match '/deleteCompletely',                  :to => 'gameConfigurations#deleteCompletely',   :via => :post
+  match '/showEditGame',                      :to => 'gameConfigurations#showEditGame',     :via => :post  
   match '/editGame',                          :to => 'gameConfigurations#editGame',     :via => :post  
   match 'delete/:gameName',                   :to => 'gameConfigurations#delete',       :via => :get
   match 'showLevel/delete',                   :to => 'levels#delete',                   :via => :post
+  match 'createdLevel/:gameName',             :to => 'Levels#created',                  :via => :post
+  match 'showLevel/:gameName/:levelName/xml', :to => 'Levels#xml',                      :via => :get
+  match '/showLevel/:gameName',               :to => 'levels#show',                    :via => :get
   
   
   match ':gameName/sequences/create',         :to => 'sequences#create',                :via => :get  # show the form for creating sequences
